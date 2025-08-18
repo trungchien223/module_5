@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+/* Container styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading styling */
+.container h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Student table styling */
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+/* Table header styling */
+.student-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.student-table th {
+  padding: 15px 20px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+}
+
+/* Table body styling */
+.student-table tbody tr {
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #e1e8ed;
+}
+
+.student-table tbody tr:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.student-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Table cell styling */
+.student-table td {
+  padding: 15px 20px;
+  font-size: 1rem;
+  color: #2c3e50;
+  border: none;
+}
+
+/* Alternating row colors */
+.student-table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.student-table tbody tr:nth-child(even):hover {
+  background-color: #e9ecef;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .student-table {
+    font-size: 0.9rem;
+  }
+  
+  .student-table th,
+  .student-table td {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .container h1 {
+    font-size: 1.5rem;
+  }
+}
