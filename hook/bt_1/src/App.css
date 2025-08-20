@@ -1,0 +1,99 @@
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.app h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.counters-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.counter {
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  min-width: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.counter:hover {
+  transform: translateY(-5px);
+}
+
+.counter h3 {
+  margin: 0 0 20px 0;
+  color: #495057;
+  font-size: 1.5rem;
+}
+
+.counter-display {
+  margin: 20px 0;
+}
+
+.count {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #007bff;
+  display: block;
+}
+
+.counter-controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.increment-btn, .reset-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.increment-btn {
+  background: #007bff;
+  color: white;
+}
+
+.increment-btn:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+.reset-btn {
+  background: #6c757d;
+  color: white;
+}
+
+.reset-btn:hover {
+  background: #545b62;
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .counters-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .counter {
+    min-width: 200px;
+  }
+}
